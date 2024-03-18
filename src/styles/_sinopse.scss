@@ -1,0 +1,100 @@
+@use 'variaveis';
+
+.sinopse {
+    background-color: variaveis.$cor-de-fundo;
+
+    @media (max-width: 768px) {
+        padding-bottom: 60px;
+    }
+
+    &__img {
+        width: 650px;
+        height: 800px;
+        padding: 85px 0px 85px 210px;
+
+        @media (min-width: 769px) and (max-width: 1023px) {
+            padding-left: 80px;
+            height: auto;
+            width: 350px;
+            }
+
+        @media (max-width: 768px) {
+            padding: 60px 0px;
+            height: 470px;
+            width: 270px;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        background-color: variaveis.$cor-de-fundo;
+
+        @media (max-width: 768px) {
+            display: block;
+            text-align: center;
+            grid-template-columns: none;
+        }
+
+        &__filho {
+            padding-right: 210px;
+
+            @media (min-width: 769px) and (max-width: 1023px) {
+                padding-right: 80px;
+                }
+
+            @media (max-width: 768px) {
+                padding: 0px 30px;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-family: 'Cormorant Garamond', serif;
+                font-weight: 600;
+                color: variaveis.$cor-texto-principal;
+                font-size: 36px;
+                letter-spacing: 1px;
+                margin-bottom: 40px;
+
+                @media (max-width: 768px) {
+                    font-size: 28px;
+                }
+            }
+
+            p {
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 40%;
+                height: 40px;
+                font-size: 18px;
+                color: variaveis.$cor-de-fundo;
+                background-color: variaveis.$cor-texto-principal;
+                text-transform: uppercase;
+                border-radius: 4px;
+                text-decoration: none;
+                padding: 8px 14px;
+                letter-spacing: 1px;
+                border: 1px solid variaveis.$cor-texto-principal;
+                margin-top: 40px;
+
+                @media (min-width: 769px) and (max-width: 1023px) {
+                    max-width: 70%;
+                    }
+
+                @media (max-width: 768px) {
+                    text-align: center;
+                    max-width: 100%;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

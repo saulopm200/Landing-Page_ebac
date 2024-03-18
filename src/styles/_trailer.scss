@@ -1,0 +1,33 @@
+@use 'variaveis';
+
+.trailer {
+    min-width: 1000px;
+    background-color: variaveis.$cor-texto-principal;
+    text-align: center;
+    padding-bottom: 80px;
+
+    @media (max-width: 768px) {
+        min-width: 0px;
+        padding-bottom: 60px;
+
+        iframe {
+            height: auto;
+            width: 300px;
+        }
+    }
+
+    h2 {
+        padding-top: 80px;
+        padding-bottom: 50px;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: variaveis.$cor-de-fundo;
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    }
+}

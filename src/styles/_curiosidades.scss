@@ -1,0 +1,40 @@
+@use 'variaveis';
+
+
+.curiosidades {
+    text-align: center;
+    background-color: variaveis.$cor-de-fundo;
+    padding-bottom: 80px;
+    display: block;
+
+    @media (max-width: 768px) {
+        padding-bottom: 60px;
+    }
+
+    h2 {
+        padding-top: 80px;
+        padding-bottom: 20px;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: variaveis.$cor-texto-principal;
+
+        @media (max-width: 768px) {
+            padding-top: 60px;
+            font-size: 28px;
+        }
+    }
+
+    li {
+        margin-top: 20px;
+
+        @media (max-width: 768px) {
+            padding: 0px 30px;
+            font-size: 12px;
+        }
+    }
+
+    i {
+        margin-right: 15px;
+    }
+}

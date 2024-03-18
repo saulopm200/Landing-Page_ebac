@@ -1,0 +1,89 @@
+@use 'variaveis';
+
+.personagens {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 80px 210px 90px;
+    width: 100%;
+    background-color: variaveis.$cor-section-personagens;
+
+    @media (min-width: 769px) and (max-width: 1023px) {
+        padding: 0px 75px 20px;
+        gap: 30px;
+        }
+
+    @media (max-width: 768px) {
+    display: block;
+    grid-template-columns: none;
+    padding: 0px 75px 20px;
+    }
+
+    &__img {
+        background-size: 100%;
+        filter: grayscale(100%);
+        height: 355px;
+        width: 100%;
+        margin-bottom: 16px;
+        transition: transform .3s ease-in;
+
+        @media (min-width: 769px) and (max-width: 1023px) {
+            height: 280px;
+            }
+
+        @media (max-width: 768px) {
+            height: auto;
+            width: 270;
+            filter: none;
+        }
+
+        &:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    }
+
+    #ator {
+        color: variaveis.$cor-id-ator;
+        margin-left: 8px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+    
+    #personagem {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 32px;
+        color: variaveis.$cor-de-fundo;
+        text-align: right;
+        margin-right: 8px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+}
+
+.elenco {
+    background-color: variaveis.$cor-section-personagens;
+    color: variaveis.$cor-de-fundo;
+    padding-top: 80px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    font-size: 36px;
+
+    @media (max-width: 768px) {
+        padding-top: 60px;
+        font-size: 28px;
+        padding-bottom: 40px;
+    }
+}
+
+.responsivo {
+    @media (max-width: 768px) {
+        padding-bottom: 40px;
+    }
+}

@@ -1,0 +1,25 @@
+.hero {
+    &__container {
+        max-width: 1324px;
+        margin: 0px 0px 0px 140px;
+        max-height: 770px;
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 0px;
+        }
+
+        &__img {
+            height: 770px;
+            width: 100%;
+            margin-left: 85px;
+            margin-top: 20px;
+
+            @media (max-width: 768px) {
+                height: auto;
+                margin-top: 50px;
+                margin-left: 0px;
+            }
+        }
+    }
+}
